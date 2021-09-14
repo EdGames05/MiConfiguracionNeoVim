@@ -25,6 +25,14 @@ Plug 'kassio/neoterm'
 " :SplitOpen filename
 Plug 'mandlm/vim-split-open'
 
+" Terminal flotante
+" Ejemplo de uso:
+" :FloatermNew
+" Esconder la termina flotante
+" :FloatermToggle
+" Cambiar de terminal
+" FloatermNext ó FloatermPrev
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
