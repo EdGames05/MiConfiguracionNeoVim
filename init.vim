@@ -1,5 +1,9 @@
 
 call plug#begin(stdpath('data'))
+
+" Soporte para TypeScript
+Plug 'leafgarland/typescript-vim'
+
 " NerdTree
 Plug 'preservim/nerdtree'
 
@@ -34,6 +38,7 @@ Plug 'mandlm/vim-split-open'
 " FloatermNext ó FloatermPrev
 Plug 'voldikss/vim-floaterm'
 
+
 call plug#end()
 
 " Iniciar nerdtree cuando se abra neovim
@@ -43,3 +48,8 @@ nmap <F6> :NERDTreeToggle<CR>
 
 " Establecer tema de papaya
 colorscheme papaya
+
+" Agregar que la terminal flotante se oculte con F7
+nmap <F7> :FloatermToggle<CR>
+" Agregar cambio de la terminal con F8
+nmap <F8> :FloatermNext<CR>
