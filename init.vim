@@ -5,6 +5,7 @@ call plug#begin(stdpath('data'))
 Plug 'leafgarland/typescript-vim'
 
 " NerdTree
+" Ctrl+w es para cambiar de ventanta (splits)
 Plug 'preservim/nerdtree'
 
 " Formatear diferentes lenguajes de programación
@@ -51,5 +52,7 @@ colorscheme papaya
 
 " Agregar que la terminal flotante se oculte con F7
 nmap <F7> :FloatermToggle<CR>
-" Agregar cambio de la terminal con F8
-nmap <F8> :FloatermNext<CR>
+" Agregar cambio de la terminal anterior con F8
+nmap <F8> :FloatermPrevious<CR>
+" Agregar cambio de la terminal siguiente con F9
+nmap <F9> :FloatermNext<CR>
