@@ -39,6 +39,8 @@ Plug 'mandlm/vim-split-open'
 " FloatermNext ó FloatermPrev
 Plug 'voldikss/vim-floaterm'
 
+" Tabnine
+Plug 'zxqfl/tabnine-vim'
 
 call plug#end()
 
