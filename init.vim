@@ -65,5 +65,12 @@ nmap <F9> :FloatermNext<CR>
 " Insertar caracteres que no estan en el teclado
 inoremap <C-.> >
 inoremap <C-,> <
-inoremap <C-|> ~
 inoremap <C-/> \
+
+filetype plugin indent on
+" Mostrar 4 espacios
+set tabstop=4
+" Cuando encuentre mayor a 4 espacios detenerse
+set shiftwidth=4
+" Insertar 4 espacios
+set expandtab
