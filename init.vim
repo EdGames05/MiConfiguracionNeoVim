@@ -2,7 +2,13 @@
 call plug#begin(stdpath('data'))
 
 " Soporte para TypeScript
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
+
+" Soporte para jsx
+Plugin 'mxw/vim-jsx'
+
+" Autocompletado
+Plugin 'valloric/youcompleteme'
 
 " NerdTree
 " Ctrl+w es para cambiar de ventanta (splits)
@@ -10,9 +16,6 @@ Plug 'preservim/nerdtree'
 
 " Formatear diferentes lenguajes de programación
 Plug 'rhysd/vim-clang-format'
-
-" Autocompletado
-Plug 'valloric/youcompleteme'
 
 " Tema oscuro Papaya
 Plug 'henrynewcomer/vim-theme-papaya'
@@ -58,3 +61,9 @@ nmap <F7> :FloatermToggle<CR>
 nmap <F8> :FloatermPrevious<CR>
 " Agregar cambio de la terminal siguiente con F9
 nmap <F9> :FloatermNext<CR>
+
+" Insertar caracteres que no estan en el teclado
+inoremap <C-.> >
+inoremap <C-,> <
+inoremap <C-|> ~
+inoremap <C-/> \
