@@ -66,6 +66,7 @@ nmap <F9> :FloatermNext<CR>
 inoremap <C-.> >
 inoremap <C-,> <
 inoremap <C-/> \
+inoremap <C-|> `
 
 filetype plugin indent on
 " Mostrar 4 espacios
