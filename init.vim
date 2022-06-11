@@ -4,11 +4,14 @@ call plug#begin(stdpath('data'))
 " Soporte para TypeScript
 "Plug 'leafgarland/typescript-vim'
 
+" Buscar definiciones de funciones
+Plug 'majutsushi/tagbar'
+
 " Soporte para jsx
-Plugin 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 
 " Autocompletado
-Plugin 'valloric/youcompleteme'
+Plug 'davidhalter/jedi-vim'
 
 " NerdTree
 " Ctrl+w es para cambiar de ventanta (splits)
@@ -51,6 +54,8 @@ call plug#end()
 autocmd VimEnter * NERDTree
 " Toggle NerdTree
 nmap <F6> :NERDTreeToggle<CR>
+" Actualizar nerdtree despues de crea un archivo
+nmap <F5> :NERDTreeRefreshRoot
 
 " Establecer tema de papaya
 colorscheme papaya
@@ -62,11 +67,17 @@ nmap <F8> :FloatermPrevious<CR>
 " Agregar cambio de la terminal siguiente con F9
 nmap <F9> :FloatermNext<CR>
 
+" Usar TagBar
+nmap <F12> :TagbarToggle<CR>
+
+" Añadir codificación utf8
+set encoding=utf-8
+
 " Insertar caracteres que no estan en el teclado
 inoremap <C-.> >
 inoremap <C-,> <
 inoremap <C-/> \
-inoremap <C-|> `
+"inoremap <C-|> `
 
 filetype plugin indent on
 " Mostrar 4 espacios
