@@ -55,7 +55,7 @@ autocmd VimEnter * NERDTree
 " Toggle NerdTree
 nmap <F6> :NERDTreeToggle<CR>
 " Actualizar nerdtree despues de crea un archivo
-nmap <F5> :NERDTreeRefreshRoot
+nmap <F5> :NERDTreeRefreshRoot<CR>
 
 " Establecer tema de papaya
 colorscheme papaya
@@ -86,3 +86,13 @@ set tabstop=4
 set shiftwidth=4
 " Insertar 4 espacios
 set expandtab
+
+" Copiar y pegar
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+vmap <silent> <C-c> "+y
+nmap <silent> <C-c> "+yy
+vmap <silent> <C-v> "+p
+imap <silent> <C-v> <Esc>"+pa
