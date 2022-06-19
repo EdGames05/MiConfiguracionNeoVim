@@ -1,6 +1,9 @@
 
 call plug#begin(stdpath('data'))
 
+" Plugin para copilot
+Plug 'github/copilot.vim'
+
 " Soporte para TypeScript
 "Plug 'leafgarland/typescript-vim'
 
