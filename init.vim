@@ -4,9 +4,6 @@ call plug#begin(stdpath('data'))
 " Plugin para copilot
 Plug 'github/copilot.vim'
 
-" Soporte para TypeScript
-"Plug 'leafgarland/typescript-vim'
-
 " Buscar definiciones de funciones
 Plug 'majutsushi/tagbar'
 
@@ -14,7 +11,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mxw/vim-jsx'
 
 " Autocompletado
-Plug 'davidhalter/jedi-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NerdTree
 " Ctrl+w es para cambiar de ventanta (splits)
@@ -24,7 +21,10 @@ Plug 'preservim/nerdtree'
 Plug 'rhysd/vim-clang-format'
 
 " Tema oscuro Papaya
-Plug 'henrynewcomer/vim-theme-papaya'
+"Plug 'henrynewcomer/vim-theme-papaya'
+
+" Tema oscuro tender
+Plug 'jacoborus/tender.vim'
 
 " Tab Panels
 Plug 'mkitt/tabline.vim'
@@ -48,9 +48,6 @@ Plug 'mandlm/vim-split-open'
 " FloatermNext ó FloatermPrev
 Plug 'voldikss/vim-floaterm'
 
-" Tabnine
-Plug 'zxqfl/tabnine-vim'
-
 call plug#end()
 
 " Iniciar nerdtree cuando se abra neovim
@@ -61,7 +58,17 @@ nmap <F6> :NERDTreeToggle<CR>
 nmap <F5> :NERDTreeRefreshRoot<CR>
 
 " Establecer tema de papaya
-colorscheme papaya
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Theme
+syntax enable
+colorscheme tender
 
 " Agregar que la terminal flotante se oculte con F7
 nmap <F7> :FloatermToggle<CR>
@@ -99,3 +106,13 @@ vmap <silent> <C-c> "+y
 nmap <silent> <C-c> "+yy
 vmap <silent> <C-v> "+p
 imap <silent> <C-v> <Esc>"+pa
+
+" *******************************************************************************************************************************
+" Configurando Autocompletado
+" *******************************************************************************************************************************
+" Importar configuración de Autocompletado
+source autocompletado-coc.vim
+
+" *******************************************************************************************************************************
+" *******************************************************************************************************************************
+" *******************************************************************************************************************************
