@@ -56,6 +56,8 @@ autocmd VimEnter * NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 " Actualizar nerdtree despues de crea un archivo
 nmap <F5> :NERDTreeRefreshRoot<CR>
+" Ver archivos ocultos
+let NERDTreeShowHidden=1
 
 " Establecer tema de papaya
 " If you have vim >=8.0 or Neovim >= 0.1.5
