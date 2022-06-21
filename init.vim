@@ -19,6 +19,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " NerdTree
 " Ctrl+w es para cambiar de ventanta (splits)
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Formatear diferentes lenguajes de programación
 Plug 'rhysd/vim-clang-format'
@@ -125,3 +126,8 @@ source autocompletado-coc.vim
 " Configurar Ctrl+z
 nnoremap <C-z> :u<CR>
 inoremap <C-z> <C-o>:u<CR>
+
+
+" Configurando colores al NERDTree
+set encoding=UTF-8
+let g:airline_powerline_fonts = 1
