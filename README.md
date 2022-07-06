@@ -2,6 +2,16 @@
 Este repositorio contiene mi configuración personaliza para NeoVim
 
 # Uso de configuración
+
+## Comandos
+| Comando                                       | Acción                                                            |
+| -- | -- |
+| gt                                            | Navegar a la ventana siguiente                                    |
+| gT                                            | Navegar a la ventana anterior                                     |
+| i                                             | Insertar texto                                                    |
+| v                                             | Entrar al modo visual                                             |
+| gd ó gD                                       | Ir a la definición                                                |
+
 ## NERDTree
 
 | Comando                                       | Acción                                                            |
@@ -10,11 +20,6 @@ Este repositorio contiene mi configuración personaliza para NeoVim
 | F5                                            | Refresca el Arbol de NERDTree                                     |
 | t                                             | Abrir en una nueva ventana el archivo y navegar                   |
 | T                                             | Abrir en una nueva ventana el archivo y no navegar                |
-| gt                                            | Navegar a la ventana siguiente                                    |
-| gT                                            | Navegar a la ventana anterior                                     |
-| i                                             | Insertar texto                                                    |
-| v                                             | Entrar al modo visual                                             |
-| gd ó gD                                       | Ir a la definición                                                |
 
 ## Floaterm (Terminal flotante)
 | Comando                                       | Acción                                                            |
@@ -37,3 +42,11 @@ Este repositorio contiene mi configuración personaliza para NeoVim
 | Ctrl+C                                        | Copia el texto seleccionado en modo visual                        |
 | Ctrl+V                                        | Pega el texto en modo insertar                                    |
 | Ctrl+Z                                        | Deshacer cambios en modo visual o modo insertar                   |
+
+## Comandos más usados de los plugins insertados
+| Comando                                       | Acción                                                            |
+| -- | -- |
+| :terminal [comandos]                          | Abré una terminal con el comando ha ejecutar                      |
+| :T [comandos]                                 | Abré una terminal con el comando ha ejecutar                      |
+| :FloatermNew [comandos opcionales]            | Abré una ventana flotante con el comando                          |
+| :Explore                                      | Abré un explorador de archivos en la ruta actual del NERDTree     |
