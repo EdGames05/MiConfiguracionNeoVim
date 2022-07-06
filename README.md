@@ -11,6 +11,7 @@ Este repositorio contiene mi configuración personaliza para NeoVim
 | i                                             | Insertar texto                                                    |
 | v                                             | Entrar al modo visual                                             |
 | gd ó gD                                       | Ir a la definición                                                |
+| Ctrl+W (derecha o izquierda o repetir teclas) | Navegar entre divisiones (ventanas internas)                      |
 
 ## NERDTree
 
