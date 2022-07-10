@@ -1,6 +1,12 @@
 
 call plug#begin(stdpath('data'))
 
+" Barra inferior
+Plug 'vim-airline/vim-airline'
+
+" Iconos
+Plug 'ryanoasis/vim-devicons'
+
 " Plugin para poner números a la izquierda del código
 Plug 'myusuf3/numbers.vim'
 
@@ -134,3 +140,4 @@ let g:airline_powerline_fonts = 1
 
 " Configurar scroll del mouse
 set mouse=a
+
