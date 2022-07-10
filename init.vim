@@ -131,3 +131,6 @@ inoremap <C-z> <C-o>:u<CR>
 " Configurando colores al NERDTree
 set encoding=UTF-8
 let g:airline_powerline_fonts = 1
+
+" Configurar scroll del mouse
+set mouse=a
