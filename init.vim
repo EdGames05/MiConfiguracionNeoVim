@@ -141,3 +141,6 @@ let g:airline_powerline_fonts = 1
 " Configurar scroll del mouse
 set mouse=a
 
+" Quitar lo de cortar texto
+set nowrap
+
