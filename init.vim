@@ -1,6 +1,15 @@
 
 call plug#begin(stdpath('data'))
 
+" Para navegar en el código
+Plug 'https://github.com/preservim/tagbar'
+
+" CSS Colores
+Plug 'https://github.com/ap/vim-css-color'
+
+" Multiples cursores
+Plug 'terryma/vim-multiple-cursors'
+
 " Barra inferior
 Plug 'vim-airline/vim-airline'
 
@@ -25,7 +34,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " NerdTree
 " Ctrl+w es para cambiar de ventanta (splits)
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 
 " Formatear diferentes lenguajes de programación
 Plug 'rhysd/vim-clang-format'
@@ -143,4 +151,3 @@ set mouse=a
 
 " Quitar lo de cortar texto
 set nowrap
-
