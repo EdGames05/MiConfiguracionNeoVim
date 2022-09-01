@@ -12,6 +12,10 @@ Este repositorio contiene mi configuración personaliza para NeoVim
 | v                                             | Entrar al modo visual                                             |
 | gd ó gD                                       | Ir a la definición                                                |
 | Ctrl+W (derecha o izquierda o repetir teclas) | Navegar entre divisiones (ventanas internas)                      |
+| ESPACIO f f                                   | Abrir telescope y buscar archivos                                 |
+| ESPACIO f g                                   | Aplicar grep en telescope                                         |
+| ESPACIO f b                                   | Usar Buffers                                                      |
+| ESPACIO f h                                   | Ayuda de Telescope                                                |
 
 ## NERDTree
 
@@ -25,9 +29,9 @@ Este repositorio contiene mi configuración personaliza para NeoVim
 ## Floaterm (Terminal flotante)
 | Comando                                       | Acción                                                            |
 | -- | -- |
-| F7                                            | Esconde o aparece el Floaterm                                     |
-| F8                                            | Navegar a la ventana flotante anterior                            |
-| F9                                            | Navegar a la siguiente ventanta flotante                          |
+| ESPACIO t f                                   | Esconde o aparece el Floaterm                                     |
+| ESPACIO t p                                   | Navegar a la ventana flotante anterior                            |
+| ESPACIO t n                                   | Navegar a la siguiente ventanta flotante                          |
 
 ## TagBar
 | Comando                                       | Acción                                                            |
