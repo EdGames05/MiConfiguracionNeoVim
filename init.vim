@@ -1,5 +1,8 @@
-
 call plug#begin(stdpath('data'))
+
+" Plugin para buscar entre archivos
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Para navegar en el código
 Plug 'https://github.com/preservim/tagbar'
@@ -22,12 +25,6 @@ Plug 'myusuf3/numbers.vim'
 " Plugin para copilot
 Plug 'github/copilot.vim'
 
-" Buscar definiciones de funciones
-Plug 'majutsushi/tagbar'
-
-" Soporte para jsx
-Plug 'mxw/vim-jsx'
-
 " Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -35,16 +32,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ctrl+w es para cambiar de ventanta (splits)
 Plug 'preservim/nerdtree'
 
-" Formatear diferentes lenguajes de programación
-Plug 'rhysd/vim-clang-format'
-
-" Tema oscuro Papaya
-"Plug 'henrynewcomer/vim-theme-papaya'
-
 " Tema oscuro tender
 Plug 'jacoborus/tender.vim'
 
-" Tab Panels
+" Pestañas por cada archivo abierto
 Plug 'mkitt/tabline.vim'
 
 " Terminal integrada
@@ -90,12 +81,12 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
 colorscheme tender
 
-" Agregar que la terminal flotante se oculte con F7
-nmap <F7> :FloatermToggle<CR>
-" Agregar cambio de la terminal anterior con F8
-nmap <F8> :FloatermPrevious<CR>
-" Agregar cambio de la terminal siguiente con F9
-nmap <F9> :FloatermNext<CR>
+" Agregar que la terminal flotante se oculte con ESPACIO t f
+nmap <space>tf :FloatermToggle<CR>
+" Agregar cambio de la terminal anterior con ESPACIO t p
+nmap <space>tp :FloatermPrevious<CR>
+" Agregar cambio de la terminal siguiente con ESPACIO t n
+nmap <space>tn :FloatermNext<CR>
 
 " Usar TagBar
 nmap <F12> :TagbarToggle<CR>
@@ -109,13 +100,13 @@ inoremap <C-,> <
 inoremap <C-/> \
 "inoremap <C-|> `
 
-filetype plugin indent on
+"filetype plugin indent on
 " Mostrar 4 espacios
-set tabstop=4
+" set tabstop=4
 " Cuando encuentre mayor a 4 espacios detenerse
-set shiftwidth=4
+" set shiftwidth=4
 " Insertar 4 espacios
-set expandtab
+" set expandtab
 
 " Copiar y pegar
 vnoremap <silent> y y`]
@@ -151,3 +142,9 @@ set mouse=a
 
 " Quitar lo de cortar texto
 set nowrap
+
+" Buscar archivos usando Telescope
+nnoremap <space>ff <cmd>Telescope find_files<cr>
+nnoremap <space>fg <cmd>Telescope live_grep<cr>
+nnoremap <space>fb <cmd>Telescope buffers<cr>
+nnoremap <space>fh <cmd>Telescope help_tags<cr>
