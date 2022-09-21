@@ -98,15 +98,16 @@ set encoding=utf-8
 inoremap <C-.> >
 inoremap <C-,> <
 inoremap <C-/> \
-"inoremap <C-|> `
+inoremap <C-|> `
 
+syntax on
 "filetype plugin indent on
 " Mostrar 4 espacios
-" set tabstop=4
+set tabstop=4
 " Cuando encuentre mayor a 4 espacios detenerse
-" set shiftwidth=4
-" Insertar 4 espacios
-" set expandtab
+set shiftwidth=4
+" Mantener esos espacios
+set noexpandtab
 
 " Copiar y pegar
 vnoremap <silent> y y`]
