@@ -101,13 +101,21 @@ inoremap <C-/> \
 inoremap <C-|> `
 
 syntax on
-"filetype plugin indent on
-" Mostrar 4 espacios
-set tabstop=4
-" Cuando encuentre mayor a 4 espacios detenerse
-set shiftwidth=4
-" Mantener esos espacios
-set noexpandtab
+" Spaces & Tabs {{{
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+" }}} Spaces & Tabs
+
+" Folding {{{
+set foldenable
+set foldlevelstart=10  " default folding level when buffer is opened
+set foldnestmax=10     " maximum nested fold
+set foldmethod=syntax  " fold based on indentation
+" }}} Folding
 
 " Copiar y pegar
 vnoremap <silent> y y`]
