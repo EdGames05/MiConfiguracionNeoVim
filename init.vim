@@ -133,6 +133,28 @@ imap <silent> <C-v> <Esc>"+pa
 " Importar configuración de Autocompletado
 source autocompletado-coc.vim
 
+" use <tab> for trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+" Use <C-@> on vim
+inoremap <silent><expr> <c-@> coc#refresh()
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
 " *******************************************************************************************************************************
 " *******************************************************************************************************************************
 " *******************************************************************************************************************************
