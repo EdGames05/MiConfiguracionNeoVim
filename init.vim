@@ -175,7 +175,15 @@ set mouse=a
 set nowrap
 
 " Buscar archivos usando Telescope
-nnoremap <space>ff <cmd>Telescope find_files<cr>
+nnoremap <space>ff <cmd>Telescope find_files hidden=true<cr>
 nnoremap <space>fg <cmd>Telescope live_grep<cr>
 nnoremap <space>fb <cmd>Telescope buffers<cr>
 nnoremap <space>fh <cmd>Telescope help_tags<cr>
+" Ignorar Carpetas dónde no debería buscar telescope
+lua << EOF
+require('telescope').setup{
+  defaults = { 
+    file_ignore_patterns = { "node_modules", ".git", ".vendor" }
+  }
+}
+EOF
