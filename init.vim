@@ -187,3 +187,6 @@ require('telescope').setup{
   }
 }
 EOF
+
+" Cambiando colores de la terminal
+source colores.vim
