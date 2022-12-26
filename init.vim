@@ -57,6 +57,9 @@ Plug 'mandlm/vim-split-open'
 " FloatermNext ó FloatermPrev
 Plug 'voldikss/vim-floaterm'
 
+" Este plugin es para cerrar automaticamente llaves, parentesis, etc
+Plug 'm4xshen/autoclose.nvim'
+
 call plug#end()
 
 " Iniciar nerdtree cuando se abra neovim
@@ -190,3 +193,25 @@ EOF
 
 " Cambiando colores de la terminal
 source colores.vim
+
+" Configurar autoclose
+" Configurar el autocompletado de las llaves, parentesis, etc
+lua << EOF
+
+local config = {
+   ["("] = { escape = false, close = true, pair = "()"},
+   ["["] = { escape = false, close = true, pair = "[]"},
+   ["{"] = { escape = false, close = true, pair = "{}"},
+
+   [">"] = { escape = true, close = false, pair = "<>"},
+   [")"] = { escape = true, close = false, pair = "()"},
+   ["]"] = { escape = true, close = false, pair = "[]"},
+   ["}"] = { escape = true, close = false, pair = "{}"},
+
+   ['"'] = { escape = true, close = true, pair = '""'},
+   ["'"] = { escape = true, close = true, pair = "''"},
+   ["`"] = { escape = true, close = true, pair = "``"},
+}
+
+require('autoclose').setup(config)
+EOF
