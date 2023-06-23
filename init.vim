@@ -23,7 +23,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'myusuf3/numbers.vim'
 
 " Plugin para copilot
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
+" Se comento github copilot tras el atraso de mi licencia
+
+" Para TabNine
+Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 " Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
